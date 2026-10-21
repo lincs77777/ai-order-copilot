@@ -1,0 +1,50 @@
+{"id": "ord-001", "type": "single_add", "turns": ["来一份10ml的小蛋糕"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-002", "type": "single_add", "turns": ["加两杯饮料到购物车"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 2}]}}
+{"id": "ord-003", "type": "multi_turn_modify", "turns": ["来一个10ml的小蛋糕", "改成3个"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "10ml", "quantity": 3}]}}
+{"id": "ord-004", "type": "multi_turn_modify", "turns": ["来两个30ml的小蛋糕", "不要了，删掉"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-005", "type": "constraint_nonexist", "turns": ["来一份宫保鸡丁"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-006", "type": "multi_add", "turns": ["来一份10ml小蛋糕和一杯饮料"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "10ml", "quantity": 1}, {"product_id": 15, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-007", "type": "query_cart", "turns": ["看看我的购物车"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-008", "type": "order_flow", "turns": ["来一个10ml小蛋糕，自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-009", "type": "order_flow_missing_address", "turns": ["来一杯饮料，外卖下单"], "expect": {"kind": "ask_address"}}
+{"id": "ord-010", "type": "spec_check", "turns": ["小蛋糕都有什么规格？"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-011", "type": "single_add", "turns": ["来三个30ml小蛋糕"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "30ml", "quantity": 3}]}}
+{"id": "ord-012", "type": "merge_add", "turns": ["来一个10ml小蛋糕", "再来一个"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "10ml", "quantity": 2}]}}
+{"id": "ord-013", "type": "remove_nonexist_cart_item", "turns": ["把购物车里的薯条删掉"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-014", "type": "order_flow", "turns": ["加购一份10ml小蛋糕和两杯饮料，然后自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-015", "type": "quantity_limit", "turns": ["来 25 个10ml小蛋糕"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-016", "type": "single_add", "turns": ["我要一杯饮料，直接加购"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-017", "type": "order_flow_cancel_preview", "turns": ["来一份10ml小蛋糕", "自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-018", "type": "constraint_nonexist", "turns": ["有没有珍珠奶茶？来一杯"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-019", "type": "query_cart", "turns": ["来一份10ml小蛋糕", "我点了什么？"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-020", "type": "multi_turn_modify", "turns": ["来一份10ml小蛋糕和一杯饮料", "饮料不要了"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-021", "type": "single_add", "turns": ["土豆炒肉来一份"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 16, "sku_unique": "默认", "quantity": 1}]}}
+{"id": "ord-022", "type": "spec_check", "turns": ["饮料多少钱？"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-023", "type": "merge_add", "turns": ["来两杯饮料", "再来三杯"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 5}]}}
+{"id": "ord-024", "type": "order_flow", "turns": ["来一份10ml小蛋糕，帮我自取下单，订单备注不要餐具"], "expect": {"kind": "order_created"}}
+{"id": "ord-025", "type": "constraint_nonexist", "turns": ["来一份鱼香肉丝"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-026", "type": "single_add", "turns": ["随便推荐个甜点，加上"], "expect": {"kind": "product_any", "items": [{"product_id": 17, "quantity": 1}]}}
+{"id": "ord-027", "type": "multi_turn_modify", "turns": ["来两杯饮料", "改成一杯"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-028", "type": "spec_check", "turns": ["小蛋糕30ml的还有货吗？"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-029", "type": "order_flow", "turns": ["来三份10ml小蛋糕，自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-030", "type": "query_cart", "turns": ["我的购物车里现在有什么？"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-031", "type": "single_add", "turns": ["来一份土豆炒肉吧"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 16, "sku_unique": "默认", "quantity": 1}]}}
+{"id": "ord-032", "type": "remove_partial", "turns": ["来一份10ml小蛋糕和一杯饮料", "小蛋糕删掉"], "expect": {"kind": "cart", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-033", "type": "order_flow", "turns": ["我饿了，随便来点吃的直接自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-034", "type": "constraint_nonexist", "turns": ["来一杯杨枝甘露"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-035", "type": "single_add", "turns": ["给我整两份30ml的小蛋糕"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "30ml", "quantity": 2}]}}
+{"id": "ord-036", "type": "order_flow", "turns": ["来一份10ml小蛋糕和一杯饮料，自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-037", "type": "multi_turn_modify", "turns": ["来一份10ml小蛋糕", "换成30ml的"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "30ml", "quantity": 1}]}}
+{"id": "ord-038", "type": "query_cart", "turns": ["加一杯饮料到购物车", "现在一共几件东西？"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-039", "type": "order_flow", "turns": ["来两个30ml小蛋糕自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-040", "type": "constraint_nonexist", "turns": ["加一份炸鸡"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-041", "type": "single_add", "turns": ["小蛋糕来一个，10ml的"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-042", "type": "merge_add", "turns": ["来一杯饮料加购，再买两杯饮料", "再买两杯饮料"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 3}]}}
+{"id": "ord-043", "type": "remove_partial", "turns": ["来两个10ml小蛋糕和三个30ml小蛋糕", "10ml的不要了"], "expect": {"kind": "cart", "items": [{"product_id": 17, "sku_unique": "30ml", "quantity": 3}]}}
+{"id": "ord-044", "type": "spec_check", "turns": ["土豆炒肉什么价格？"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-045", "type": "order_flow", "turns": ["来一份饮料，自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-046", "type": "multi_turn_modify", "turns": ["来一份10ml小蛋糕", "再来一份30ml小蛋糕", "都删了吧"], "expect": {"kind": "cart", "items": []}}
+{"id": "ord-047", "type": "order_flow", "turns": ["点一份10ml小蛋糕自取下单，备注少放糖"], "expect": {"kind": "order_created"}}
+{"id": "ord-048", "type": "single_add", "turns": ["帮我把饮料加进购物车，不用再确认"], "expect": {"kind": "cart_or_clarify", "items": [{"product_id": 15, "sku_unique": "10ml", "quantity": 1}]}}
+{"id": "ord-049", "type": "order_flow", "turns": ["来五份10ml小蛋糕，自取下单"], "expect": {"kind": "order_created"}}
+{"id": "ord-050", "type": "query_cart", "turns": ["我想看看购物车"], "expect": {"kind": "cart", "items": []}}

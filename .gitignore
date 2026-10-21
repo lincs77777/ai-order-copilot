@@ -1,0 +1,25 @@
+# 环境与密钥（真实 .env 永不入库）
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+
+# 数据与产物
+data/
+*.log
+.pytest_cache/
+htmlcov/
+.coverage
+
+# IDE
+.idea/
+.vscode/
+
+# 评测日志产物
+evals/run_*.txt

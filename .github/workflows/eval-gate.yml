@@ -1,0 +1,42 @@
+name: eval-gate
+
+on:
+  pull_request:
+    paths:
+      - "app/agent/prompts/**"
+      - "app/rag/**"
+      - "app/llm/**"
+      - "app/tools/**"
+      - "evals/**"
+
+jobs:
+  evals:
+    runs-on: self-hosted  # 需可达 MySQL/Redis/yshop/DeepSeek 的内网 runner
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Init DB
+        run: python -m scripts.init_db
+      - name: Init vector store
+        run: python -m scripts.init_vectorstore --shop-id 2
+      - name: Run evals (gate)
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          EMBEDDING_API_KEY: ${{ secrets.EMBEDDING_API_KEY }}
+          JAVA_BASE_URL: ${{ secrets.JAVA_BASE_URL }}
+          MYSQL_URL: ${{ secrets.MYSQL_URL }}
+          REDIS_URL: ${{ secrets.REDIS_URL }}
+          YSHOP_REDIS_URL: ${{ secrets.YSHOP_REDIS_URL }}
+        run: |
+          python -m evals.runner
+          python -m evals.gate
+      - name: Report
+        if: always()
+        run: cat evals/report.json

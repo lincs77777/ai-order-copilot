@@ -1,0 +1,30 @@
+{"id": "faq-001", "question": "你们几点营业？", "expect": {"must_contain": ["09:00", "22:00"], "must_not_contain": ["超出我能确认的范围"]}}
+{"id": "faq-002", "question": "门店地址在哪里？", "expect": {"must_contain": ["人民东路"], "must_not_contain": []}}
+{"id": "faq-003", "question": "配送费怎么算？", "expect": {"must_contain": ["20"], "must_not_contain": []}}
+{"id": "faq-004", "question": "支持什么支付方式？", "expect": {"must_contain": ["微信", "支付宝"], "must_not_contain": []}}
+{"id": "faq-005", "question": "下单后多久能取餐？", "expect": {"must_contain": ["15"], "must_not_contain": []}}
+{"id": "faq-006", "question": "下单后不支付会怎么样？", "expect": {"must_contain": [], "must_not_contain": [], "must_contain_any": ["30", "支付", "确认卡片", "咨询店员"]}}
+{"id": "faq-007", "question": "有什么优惠活动？", "expect": {"must_contain": ["优惠券"], "must_not_contain": []}}
+{"id": "faq-008", "question": "小蛋糕含什么过敏原？", "expect": {"must_contain": ["鸡蛋", "麸质"], "must_not_contain": []}}
+{"id": "faq-009", "question": "后厨对过敏体质有什么需要注意的？", "expect": {"must_contain": ["交叉"], "must_not_contain": []}}
+{"id": "faq-010", "question": "珍珠奶茶含麸质吗？", "expect": {"must_not_contain": ["绝对", "百分之百"], "must_conservative_if_uncovered": true}}
+{"id": "faq-011", "question": "6666 这个饮料有花生吗？", "expect": {"must_contain": [], "must_not_contain": ["不含花生", "没有花生", "绝对安全"], "must_contain_any": ["待确认", "咨询店员", "查不到", "没有可靠信息"]}}
+{"id": "faq-012", "question": "土豆炒肉有猪肉吗？", "expect": {"must_contain": ["猪肉"], "must_not_contain": []}}
+{"id": "faq-013", "question": "咖啡因不耐受能喝咖啡吗？", "expect": {"must_not_contain": ["绝对安全", "完全没事"], "must_conservative_if_uncovered": true}}
+{"id": "faq-014", "question": "你们公司总部在哪个城市？", "expect": {"must_contain": [], "must_not_contain": [], "must_contain_any": ["超出我能确认的范围", "超出了我的服务范围"]}}
+{"id": "faq-015", "question": "这家店的老板是谁？", "expect": {"must_contain": [], "must_not_contain": [], "must_contain_any": ["超出我能确认的范围", "超出了我的服务范围", "只能帮您点餐"]}}
+{"id": "faq-016", "question": "饮料是鲜榨的吗？", "expect": {"must_not_contain": ["绝对", "百分之百"], "must_conservative_if_uncovered": true}}
+{"id": "faq-017", "question": "微辣辣不辣？", "expect": {"must_not_contain": ["完全不含辣椒", "绝对不辣", "放心吃，不辣"], "must_conservative_if_uncovered": true}}
+{"id": "faq-018", "question": "小蛋糕是奶油的吗？", "expect": {"must_contain": ["乳制品", "奶油"], "must_not_contain": []}}
+{"id": "faq-019", "question": "可以外送到我们学校吗？", "expect": {"must_not_contain": ["绝对", "一定可以"], "must_conservative_if_uncovered": true}}
+{"id": "faq-020", "question": "会员积分怎么用？", "expect": {"must_not_contain": [], "must_conservative_if_uncovered": true}}
+{"id": "faq-021", "question": "今天多少度？外面天气如何？", "expect": {"kind": "rejected"}}
+{"id": "faq-022", "question": "门店有没有停车位？", "expect": {"must_contain": ["超出我能确认的范围"], "must_not_contain": []}}
+{"id": "faq-023", "question": "饮料有没有加防腐剂？", "expect": {"must_contain": [], "must_not_contain": ["不含防腐剂"], "must_contain_any": ["待确认", "超出我能确认"]}}
+{"id": "faq-024", "question": "45ml 规格的小蛋糕有吗？", "expect": {"must_contain_any": ["10ml", "30ml", "没有 45ml", "没有45ml"], "must_not_contain": ["有货，可以加购 45ml"]}}
+{"id": "faq-025", "question": "怎么样开发票？", "expect": {"must_contain": ["超出我能确认"], "must_not_contain": [], "must_contain_any": ["超出我能确认的范围", "超出了我的服务范围", "没法直接办理", "联系门店"]}}
+{"id": "faq-026", "question": "美式咖啡含不含奶？", "expect": {"must_contain": [], "must_not_contain": ["绝对", "百分之百"], "must_conservative_if_uncovered": true}}
+{"id": "faq-027", "question": "你们和小程序是一家的吗？", "expect": {"must_contain": ["超出我能确认"], "must_not_contain": [], "must_contain_any": ["超出我能确认的范围", "超出了我的服务范围", "无法确认", "只能帮您点餐"]}}
+{"id": "faq-028", "question": "过敏体质能吃你们店的东西吗？", "expect": {"must_contain": ["咨询店员"], "must_not_contain": ["绝对安全", "都可以吃"]}}
+{"id": "faq-029", "question": "取餐需要取餐码吗？", "expect": {"must_not_contain": [], "must_conservative_if_uncovered": true}}
+{"id": "faq-030", "question": "未成年人可以点含咖啡的饮料吗？", "expect": {"must_not_contain": ["绝对", "完全没问题"], "must_conservative_if_uncovered": true}}
